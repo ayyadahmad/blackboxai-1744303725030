@@ -57,12 +57,6 @@
       },
       "description": "Activate Color Picker"
     },
-    "font-info": {
-      "suggested_key": {
-        "default": "Alt+Shift+F"
-      },
-      "description": "Show Font Information"
-    },
     "live-edit": {
       "suggested_key": {
         "default": "Alt+Shift+E"
