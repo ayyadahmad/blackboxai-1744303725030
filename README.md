@@ -1,123 +1,171 @@
-
-Built by https://www.blackbox.ai
-
----
-
-```markdown
 # CodeCraft
 
-![CodeCraft Logo](https://placehold.co/600x200?text=CodeCraft+Logo)
+CodeCraft is a comprehensive web development toolkit that combines a browser extension with a web interface for code extraction, manipulation, and analysis.
 
-## Project Overview
-
-CodeCraft is a comprehensive web development tool designed to streamline the process of code extraction, manipulation, and visual editing. This project provides a toolkit that empowers developers and designers to analyze, build, and enhance web applications efficiently. With features like code extraction, a visual editor, and project management functionalities, CodeCraft is your all-in-one solution for modern web development.
-
-## Installation
-
-### Prerequisites
-
-- A modern web browser (e.g., Chrome, Firefox)
-- Basic knowledge of HTML, CSS, and JavaScript
-
-### Steps
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/codecraft.git
-   ```
-
-2. **Open the Project in Your Browser**
-   - Navigate to the cloned folder and open `index.html` in your browser.
-   - Alternatively, you can load the unpacked extension in Chrome:
-     - Go to `chrome://extensions/`
-     - Enable "Developer mode"
-     - Click on "Load unpacked" and select the project folder.
-
-## Usage
-
-1. **Navigate Through the Application**
-   - Open `index.html` to access the main interface.
-   - Use the navigation bar to access different sections: **Home**, **Extract**, **Editor**, and **Dashboard**.
-
-2. **Extract Code**
-   - Click on the **Extract** tab.
-   - Enter the URL of the website from which you want to extract code and click the "Extract Code" button.
-
-3. **Edit Code Visually**
-   - Navigate to the **Editor** tab for a WYSIWYG (What You See Is What You Get) editing experience.
-
-4. **Manage Projects**
-   - Access the **Dashboard** to manage your projects, giving you an overview of ongoing tasks and collaborations.
+![CodeCraft Logo](assets/logo.png)
 
 ## Features
 
-- **Code Extraction**: Extract HTML, CSS, and JavaScript from any website.
-- **Visual Editor**: Edit your web components visually, making it accessible for both developers and designers.
-- **Project Management**: Organize projects and collaborate with team members.
-- **Smart Tools**: Utilize tools for code optimization, formatting, and analysis.
+### Browser Extension
+- **Element Cloning**: Clone elements from websites with ease
+- **Code Grabbing**: Extract code snippets from any website
+- **UI Snatching**: Capture complete UI components
+- **Color Selection**: Pick colors and extract color palettes
+- **Element Manipulation**: Move, hide, or modify elements
+- **Code Export**: Export to CodePen or download as files
+- **Image Extraction**: Extract images with one click
+- **Measurement Tools**: Get precise measurements
+- **Code Comparison**: Compare code from different sources
+- **Code Optimization**: Optimize extracted code automatically
 
-## Dependencies
+### Web Interface
+- **Dashboard**: Track your activity and saved components
+- **Blog**: Web development tutorials and best practices
+- **User Settings**: Customize your experience
 
-### External Libraries
+## Quick Start
 
-- **Tailwind CSS**: Included via CDN for styling.
-- **Font Awesome**: Included via CDN for icons.
+1. **Install the Extension**:
+   - Click "Start Extracting" on the homepage
+   - Follow browser extension installation prompts
+   - Pin the extension to your toolbar
 
-### Package Dependencies
+2. **Using CodeCraft**:
+   - Click the CodeCraft icon in your browser
+   - Use the inspector tool to select elements
+   - Choose your desired action from the context menu
+   - View and manage extracted code in your dashboard
 
-If your project includes `package.json`, you may have dependencies as follows (example):
+## Installation
 
-```json
-{
-  "dependencies": {
-    "tailwindcss": "^2.0.3",
-    "some-other-dependency": "^1.0.0"
-  }
-}
+### Website
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/codecraft.git
+
+# Install dependencies
+cd codecraft/server
+npm install
+
+# Start the server
+npm start
+
+# Access the website
+open http://localhost:3000
 ```
 
-Be sure to run `npm install` if applicable.
+### Extension
+1. Download the extension package
+2. Go to chrome://extensions/
+3. Enable Developer Mode
+4. Click "Load unpacked"
+5. Select the extension directory
+
+## Documentation
+
+- [Development Guide](GUIDE.md)
+- [API Documentation](docs/API.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+
+## Tech Stack
+
+- **Frontend**: HTML, CSS (Tailwind), JavaScript
+- **Backend**: Node.js, Express
+- **Extension**: Chrome Extensions API
+- **Tools**: Webpack, Babel
+
+## Browser Support
+
+- Chrome (Latest)
+- Firefox (Latest)
+- Edge (Latest)
+- Safari (Latest)
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
+```
 
 ## Project Structure
 
 ```
 codecraft/
-│
-├── css/
-│   └── styles.css
-├── js/
-│   ├── main.js
-│   ├── popup.js
-│   ├── content.js
-│   └── background.js
-├── icons/
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-├── pages/
-│   ├── index.html
-│   ├── extraction.html
-│   ├── editor.html
-│   └── dashboard.html
-├── manifest.json
-└── README.md
+├── extension/          # Browser extension files
+├── website/           # Main website
+│   ├── css/          # Stylesheets
+│   ├── js/           # JavaScript files
+│   └── server/       # Backend server
+├── docs/             # Documentation
+└── tests/            # Test files
 ```
-
-### Key Files:
-
-- `index.html`: The main entry point of the application.
-- `extraction.html`: Interface for code extraction features.
-- `editor.html`: Interface for the visual editing tool.
-- `dashboard.html`: Project management interface.
-- `manifest.json`: Configuration file for the browser extension.
-
----
-
-## Contributing
-
-Contributions to CodeCraft are welcome! Feel free to fork the repository and create a pull request to enhance functionality or fix bugs.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+- Documentation: [docs.codecraft.com](https://docs.codecraft.com)
+- Issues: [GitHub Issues](https://github.com/yourusername/codecraft/issues)
+- Email: support@codecraft.com
+- Community: [Discord Server](https://discord.gg/codecraft)
+
+## Acknowledgments
+
+- Icons by Font Awesome
+- UI Components by Tailwind CSS
+- Images from Pexels
+
+## Roadmap
+
+- [ ] AI-powered code suggestions
+- [ ] Team collaboration features
+- [ ] Visual code editor
+- [ ] Component library
+- [ ] Code snippet marketplace
+
+## Authors
+
+- Your Name - *Initial work* - [YourGitHub](https://github.com/yourusername)
+
+See also the list of [contributors](https://github.com/yourusername/codecraft/contributors) who participated in this project.
+
+## Version History
+
+- 1.0.0
+  - Initial Release
+  - Basic code extraction features
+  - Dashboard implementation
+  - Blog section
+
+## FAQ
+
+**Q: How do I install the extension?**
+A: Click "Start Extracting" on our homepage and follow the installation prompts.
+
+**Q: Is CodeCraft free to use?**
+A: Yes, CodeCraft is currently free and open source.
+
+**Q: Can I use extracted code in my projects?**
+A: Yes, but please check the original source's license terms.
