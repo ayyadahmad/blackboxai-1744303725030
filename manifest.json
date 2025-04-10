@@ -1,14 +1,19 @@
 {
   "manifest_version": 3,
   "name": "CodeCraft",
-  "version": "1.0",
-  "description": "A comprehensive web development tool for code extraction and manipulation",
+  "version": "1.0.0",
+  "description": "Advanced web development toolkit for code extraction, live editing, and UI analysis",
   "permissions": [
     "activeTab",
     "scripting",
     "storage",
+    "clipboardWrite",
     "downloads",
-    "clipboardWrite"
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -33,9 +38,44 @@
   "background": {
     "service_worker": "background.js"
   },
+  "commands": {
+    "toggle-extension": {
+      "suggested_key": {
+        "default": "Alt+Shift+C"
+      },
+      "description": "Toggle CodeCraft"
+    },
+    "copy-element": {
+      "suggested_key": {
+        "default": "Alt+Shift+X"
+      },
+      "description": "Copy Selected Element"
+    },
+    "color-picker": {
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      },
+      "description": "Activate Color Picker"
+    },
+    "font-info": {
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      },
+      "description": "Show Font Information"
+    },
+    "live-edit": {
+      "suggested_key": {
+        "default": "Alt+Shift+E"
+      },
+      "description": "Toggle Live Edit Mode"
+    }
+  },
   "web_accessible_resources": [
     {
-      "resources": ["icons/*"],
+      "resources": [
+        "icons/*",
+        "content.css"
+      ],
       "matches": ["<all_urls>"]
     }
   ]
