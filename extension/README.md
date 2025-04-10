@@ -13,9 +13,8 @@ A powerful browser extension for web development with advanced code extraction, 
 
 ### 2. Design Tools
 - **Color Picker**: `Alt+Shift+P`
-- **Font Info**: `Alt+Shift+F`
-- Extract color values (HEX, RGB, HSL)
 - Font stack analysis
+- Extract color values (HEX, RGB, HSL)
 - Measurement tools
 
 ### 3. Code Extraction
@@ -23,6 +22,13 @@ A powerful browser extension for web development with advanced code extraction, 
 - Complete style preservation
 - Clean code generation
 - Multiple export formats
+
+## Keyboard Shortcuts
+
+- `Alt+Shift+C`: Toggle CodeCraft extension
+- `Alt+Shift+X`: Copy selected element
+- `Alt+Shift+P`: Activate color picker
+- `Alt+Shift+E`: Toggle live edit mode
 
 ## Installation
 
@@ -51,11 +57,7 @@ extension/
 1. Click the CodeCraft icon or press `Alt+Shift+C`
 2. Hover over elements to inspect
 3. Click to select an element
-4. Use the context menu or keyboard shortcuts:
-   - `Alt+Shift+X`: Copy element
-   - `Alt+Shift+P`: Pick colors
-   - `Alt+Shift+F`: Get font info
-   - `Alt+Shift+E`: Live edit mode
+4. Use the context menu or keyboard shortcuts
 
 ## Testing the Extension
 
@@ -77,17 +79,19 @@ extension/
    - See color values
    - Auto-copy to clipboard
 
-4. **Font Analysis**:
-   - Select text element
-   - Press `Alt+Shift+F`
-   - View font details
-   - Copy font information
-
-5. **Code Extraction**:
+4. **Code Extraction**:
    - Select element
    - Press `Alt+Shift+X`
    - Get clean code
    - Paste anywhere
+
+## Additional Features
+
+- Font analysis through context menu
+- Element measurements
+- Style preservation
+- Code optimization
+- Multiple export formats
 
 ## Troubleshooting
 
