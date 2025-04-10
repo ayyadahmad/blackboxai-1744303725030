@@ -1,0 +1,197 @@
+/* CodeCraft Content Styles */
+
+/* Element highlight overlay */
+.codecraft-highlight {
+    position: absolute;
+    pointer-events: none;
+    z-index: 999999;
+    border: 2px solid #4f46e5;
+    background-color: rgba(79, 70, 229, 0.1);
+    transition: all 0.2s ease;
+}
+
+/* Measurement overlay */
+.codecraft-measure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 999998;
+}
+
+.codecraft-measure-label {
+    position: absolute;
+    background: rgba(79, 70, 229, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    pointer-events: none;
+}
+
+/* Context menu */
+.codecraft-context-menu {
+    position: fixed;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 4px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999999;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.codecraft-context-menu-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.codecraft-context-menu-item:hover {
+    background-color: #f3f4f6;
+}
+
+.codecraft-context-menu-item i {
+    width: 16px;
+    color: #4f46e5;
+}
+
+/* Color picker tooltip */
+.codecraft-color-tooltip {
+    position: fixed;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999999;
+    font-family: monospace;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.codecraft-color-preview {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Element info tooltip */
+.codecraft-element-info {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 999997;
+    max-width: 300px;
+}
+
+/* Selection outline */
+.codecraft-selected {
+    outline: 2px solid #4f46e5 !important;
+    outline-offset: 2px !important;
+}
+
+/* Measurement guides */
+.codecraft-measure-guide {
+    position: absolute;
+    background: rgba(79, 70, 229, 0.5);
+    pointer-events: none;
+}
+
+.codecraft-measure-guide.horizontal {
+    height: 1px;
+    left: 0;
+    right: 0;
+}
+
+.codecraft-measure-guide.vertical {
+    width: 1px;
+    top: 0;
+    bottom: 0;
+}
+
+/* Loading overlay */
+.codecraft-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+
+.codecraft-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4f46e5;
+    border-radius: 50%;
+    animation: codecraft-spin 1s linear infinite;
+}
+
+@keyframes codecraft-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Notifications */
+.codecraft-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 4px;
+    padding: 12px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 999999;
+    animation: codecraft-slide-in 0.3s ease;
+}
+
+@keyframes codecraft-slide-in {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.codecraft-notification.success {
+    border-left: 4px solid #10b981;
+}
+
+.codecraft-notification.error {
+    border-left: 4px solid #ef4444;
+}
+
+.codecraft-notification i {
+    font-size: 20px;
+}
+
+.codecraft-notification.success i {
+    color: #10b981;
+}
+
+.codecraft-notification.error i {
+    color: #ef4444;
+}
