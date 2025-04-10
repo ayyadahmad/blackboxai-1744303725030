@@ -1,58 +1,56 @@
-/* CodeCraft Content Styles */
+/* CodeCraft Extension Styles */
 
-/* Element highlight overlay */
-.codecraft-highlight {
-    position: absolute;
+/* Overlay for element highlighting */
+#codecraft-overlay {
+    position: fixed;
     pointer-events: none;
     z-index: 999999;
     border: 2px solid #4f46e5;
-    background-color: rgba(79, 70, 229, 0.1);
+    background: rgba(79, 70, 229, 0.1);
     transition: all 0.2s ease;
 }
 
-/* Measurement overlay */
-.codecraft-measure {
+/* Tooltip */
+#codecraft-tooltip {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 999998;
-}
-
-.codecraft-measure-label {
-    position: absolute;
-    background: rgba(79, 70, 229, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 4px 8px;
+    padding: 8px 12px;
     border-radius: 4px;
     font-size: 12px;
     font-family: monospace;
+    z-index: 999999;
     pointer-events: none;
+    max-width: 300px;
 }
 
-/* Context menu */
+.font-info, .color-info, .size-info {
+    margin: 4px 0;
+    padding: 2px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Context Menu */
 .codecraft-context-menu {
     position: fixed;
     background: white;
     border: 1px solid #e5e7eb;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 4px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 999999;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 14px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 1000000;
     min-width: 200px;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
 .codecraft-context-menu-item {
     padding: 8px 16px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
     color: #374151;
+    font-size: 14px;
     transition: all 0.2s ease;
 }
 
@@ -65,54 +63,196 @@
     color: #4f46e5;
 }
 
-/* Color picker tooltip */
-.codecraft-color-tooltip {
+/* Style Controls */
+.codecraft-style-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1000000;
+    width: 300px;
+}
+
+.control-group {
+    margin-bottom: 12px;
+}
+
+.control-group:last-child {
+    margin-bottom: 0;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 4px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #4f46e5;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.control-group input[type="color"] {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Dialog */
+.codecraft-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000001;
+}
+
+.dialog-content {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.dialog-content h3 {
+    margin: 0 0 16px 0;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.font-details {
+    background: #f9fafb;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.font-details p {
+    margin: 8px 0;
+    color: #374151;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+.dialog-content button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dialog-content button:hover {
+    background: #4338ca;
+}
+
+/* Notification */
+.codecraft-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-left: 4px solid #4f46e5;
+    border-radius: 4px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    color: #374151;
+    font-size: 14px;
+    z-index: 1000002;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Live Edit Mode */
+[contenteditable="true"] {
+    cursor: text;
+    outline: 2px solid #4f46e5 !important;
+    outline-offset: 2px !important;
+}
+
+/* Color Picker */
+.codecraft-color-picker {
     position: fixed;
     background: white;
     border: 1px solid #e5e7eb;
-    border-radius: 4px;
-    padding: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 999999;
-    font-family: monospace;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1000000;
 }
 
-.codecraft-color-preview {
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
+.color-preview {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
     border: 1px solid #e5e7eb;
+    margin-bottom: 8px;
 }
 
-/* Element info tooltip */
-.codecraft-element-info {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
+.color-value {
     font-family: monospace;
-    font-size: 12px;
-    pointer-events: none;
-    z-index: 999997;
-    max-width: 300px;
+    font-size: 14px;
+    color: #374151;
 }
 
-/* Selection outline */
+/* Element Selection */
 .codecraft-selected {
     outline: 2px solid #4f46e5 !important;
     outline-offset: 2px !important;
 }
 
-/* Measurement guides */
+/* Measurement Guides */
 .codecraft-measure-guide {
     position: absolute;
     background: rgba(79, 70, 229, 0.5);
     pointer-events: none;
+    z-index: 999998;
 }
 
 .codecraft-measure-guide.horizontal {
@@ -127,71 +267,14 @@
     bottom: 0;
 }
 
-/* Loading overlay */
-.codecraft-loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999999;
-}
-
-.codecraft-loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #4f46e5;
-    border-radius: 50%;
-    animation: codecraft-spin 1s linear infinite;
-}
-
-@keyframes codecraft-spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Notifications */
-.codecraft-notification {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: white;
+.codecraft-measure-label {
+    position: absolute;
+    background: rgba(79, 70, 229, 0.9);
+    color: white;
+    padding: 2px 6px;
     border-radius: 4px;
-    padding: 12px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    font-size: 12px;
+    font-family: monospace;
+    pointer-events: none;
     z-index: 999999;
-    animation: codecraft-slide-in 0.3s ease;
-}
-
-@keyframes codecraft-slide-in {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-.codecraft-notification.success {
-    border-left: 4px solid #10b981;
-}
-
-.codecraft-notification.error {
-    border-left: 4px solid #ef4444;
-}
-
-.codecraft-notification i {
-    font-size: 20px;
-}
-
-.codecraft-notification.success i {
-    color: #10b981;
-}
-
-.codecraft-notification.error i {
-    color: #ef4444;
 }
