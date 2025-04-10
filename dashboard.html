@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeCraft - Dashboard</title>
+    <title>Dashboard - CodeCraft</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -25,164 +25,95 @@
                     </div>
                     <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                         <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-                        <a href="extraction.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Extract</a>
-                        <a href="editor.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Editor</a>
+                        <a href="blog.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Blog</a>
                         <a href="dashboard.html" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Dashboard</a>
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">
-                        <i class="fas fa-plus mr-2"></i>New Project
+                    <button class="p-2 rounded-full text-gray-500 hover:text-gray-600">
+                        <i class="fas fa-bell"></i>
                     </button>
+                    <div class="ml-4">
+                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User avatar">
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Dashboard Content -->
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <!-- Dashboard Header -->
-        <div class="md:flex md:items-center md:justify-between mb-6">
-            <div class="flex-1 min-w-0">
-                <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-                    My Projects
-                </h2>
-            </div>
-            <div class="mt-4 flex md:mt-0 md:ml-4">
-                <div class="relative">
-                    <input type="text" placeholder="Search projects..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                </div>
-                <div class="ml-3">
-                    <select class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 rounded-lg">
-                        <option>All Projects</option>
-                        <option>Recent</option>
-                        <option>Shared with me</option>
-                        <option>Archived</option>
-                    </select>
-                </div>
-            </div>
+        <!-- Welcome Section -->
+        <div class="px-4 py-5 sm:px-6">
+            <h1 class="text-2xl font-bold text-gray-900">Welcome back, John!</h1>
+            <p class="mt-1 text-sm text-gray-500">Here's what's happening with your account</p>
         </div>
 
-        <!-- Project Grid -->
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Project Card 1 -->
+        <!-- Stats Grid -->
+        <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Stat 1 -->
             <div class="bg-white overflow-hidden shadow rounded-lg">
                 <div class="p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-code text-indigo-600 text-2xl"></i>
+                            <i class="fas fa-eye text-indigo-600 text-2xl"></i>
                         </div>
                         <div class="ml-5 w-0 flex-1">
-                            <h3 class="text-lg font-medium text-gray-900 truncate">
-                                Landing Page Redesign
-                            </h3>
-                            <p class="mt-1 text-sm text-gray-500">
-                                Last modified 3 days ago
-                            </p>
-                        </div>
-                        <div class="ml-4 flex-shrink-0">
-                            <button class="text-gray-400 hover:text-gray-500">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <div class="flex -space-x-2">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Collaborator">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Collaborator">
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 px-5 py-3">
-                    <div class="flex justify-between text-sm">
-                        <div class="text-gray-500">
-                            <i class="fas fa-file-code mr-1"></i> HTML, CSS
-                        </div>
-                        <div>
-                            <button class="text-indigo-600 hover:text-indigo-900">Open</button>
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Total Views</dt>
+                                <dd class="text-2xl font-semibold text-gray-900">2,847</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card 2 -->
+            <!-- Stat 2 -->
             <div class="bg-white overflow-hidden shadow rounded-lg">
                 <div class="p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-paint-brush text-indigo-600 text-2xl"></i>
+                            <i class="fas fa-download text-green-600 text-2xl"></i>
                         </div>
                         <div class="ml-5 w-0 flex-1">
-                            <h3 class="text-lg font-medium text-gray-900 truncate">
-                                E-commerce Components
-                            </h3>
-                            <p class="mt-1 text-sm text-gray-500">
-                                Last modified 1 week ago
-                            </p>
-                        </div>
-                        <div class="ml-4 flex-shrink-0">
-                            <button class="text-gray-400 hover:text-gray-500">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <div class="flex -space-x-2">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg" alt="Collaborator">
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 px-5 py-3">
-                    <div class="flex justify-between text-sm">
-                        <div class="text-gray-500">
-                            <i class="fas fa-code mr-1"></i> React Components
-                        </div>
-                        <div>
-                            <button class="text-indigo-600 hover:text-indigo-900">Open</button>
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Downloads</dt>
+                                <dd class="text-2xl font-semibold text-gray-900">1,234</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card 3 -->
+            <!-- Stat 3 -->
             <div class="bg-white overflow-hidden shadow rounded-lg">
                 <div class="p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i>
+                            <i class="fas fa-star text-yellow-500 text-2xl"></i>
                         </div>
                         <div class="ml-5 w-0 flex-1">
-                            <h3 class="text-lg font-medium text-gray-900 truncate">
-                                Mobile App UI
-                            </h3>
-                            <p class="mt-1 text-sm text-gray-500">
-                                Last modified 2 weeks ago
-                            </p>
-                        </div>
-                        <div class="ml-4 flex-shrink-0">
-                            <button class="text-gray-400 hover:text-gray-500">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <div class="flex -space-x-2">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Collaborator">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg" alt="Collaborator">
-                            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Collaborator">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Favorites</dt>
+                                <dd class="text-2xl font-semibold text-gray-900">432</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 px-5 py-3">
-                    <div class="flex justify-between text-sm">
-                        <div class="text-gray-500">
-                            <i class="fas fa-mobile-alt mr-1"></i> Mobile Design
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-5">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-share text-blue-600 text-2xl"></i>
                         </div>
-                        <div>
-                            <button class="text-indigo-600 hover:text-indigo-900">Open</button>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Shares</dt>
+                                <dd class="text-2xl font-semibold text-gray-900">156</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
@@ -191,55 +122,91 @@
 
         <!-- Recent Activity -->
         <div class="mt-8">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">Recent Activity</h3>
-            <div class="bg-white shadow overflow-hidden rounded-lg">
+            <h2 class="text-lg font-medium text-gray-900">Recent Activity</h2>
+            <div class="mt-4 bg-white shadow rounded-lg">
                 <ul class="divide-y divide-gray-200">
                     <li class="p-4">
                         <div class="flex items-center space-x-4">
                             <div class="flex-shrink-0">
-                                <i class="fas fa-edit text-indigo-600"></i>
+                                <i class="fas fa-code text-indigo-600"></i>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <p class="text-sm font-medium text-gray-900">
-                                    You edited Landing Page Redesign
-                                </p>
-                                <p class="text-sm text-gray-500">
-                                    3 hours ago
-                                </p>
+                                <p class="text-sm font-medium text-gray-900">Code snippet saved</p>
+                                <p class="text-sm text-gray-500">Responsive navigation bar</p>
                             </div>
+                            <div class="text-sm text-gray-500">2h ago</div>
                         </div>
                     </li>
                     <li class="p-4">
                         <div class="flex items-center space-x-4">
                             <div class="flex-shrink-0">
-                                <i class="fas fa-user-plus text-green-600"></i>
+                                <i class="fas fa-palette text-purple-600"></i>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <p class="text-sm font-medium text-gray-900">
-                                    Sarah joined E-commerce Components
-                                </p>
-                                <p class="text-sm text-gray-500">
-                                    1 day ago
-                                </p>
+                                <p class="text-sm font-medium text-gray-900">Color palette created</p>
+                                <p class="text-sm text-gray-500">Modern dark theme</p>
                             </div>
+                            <div class="text-sm text-gray-500">5h ago</div>
                         </div>
                     </li>
                     <li class="p-4">
                         <div class="flex items-center space-x-4">
                             <div class="flex-shrink-0">
-                                <i class="fas fa-code-branch text-purple-600"></i>
+                                <i class="fas fa-download text-green-600"></i>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <p class="text-sm font-medium text-gray-900">
-                                    New version of Mobile App UI created
-                                </p>
-                                <p class="text-sm text-gray-500">
-                                    2 days ago
-                                </p>
+                                <p class="text-sm font-medium text-gray-900">Component downloaded</p>
+                                <p class="text-sm text-gray-500">Card layout template</p>
                             </div>
+                            <div class="text-sm text-gray-500">1d ago</div>
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="mt-8">
+            <h2 class="text-lg font-medium text-gray-900">Settings</h2>
+            <div class="mt-4 bg-white shadow rounded-lg divide-y divide-gray-200">
+                <!-- Profile Settings -->
+                <div class="p-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">Profile Information</h3>
+                            <p class="mt-1 text-sm text-gray-500">Update your account information</p>
+                        </div>
+                        <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            Edit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="p-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">Notifications</h3>
+                            <p class="mt-1 text-sm text-gray-500">Manage your notification preferences</p>
+                        </div>
+                        <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            Configure
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Privacy Settings -->
+                <div class="p-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">Privacy</h3>
+                            <p class="mt-1 text-sm text-gray-500">Control your privacy settings</p>
+                        </div>
+                        <button class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            Manage
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -255,6 +222,6 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
